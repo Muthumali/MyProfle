@@ -41,13 +41,61 @@
             position: absolute;
             background-color: purple;
             width: 20vw;
-            height: 500px;
+           height: 500px;
         }
 
         main>section{
             position: absolute;
             left: 20vw;
         }
+
+        nav>ul{
+            position: absolute;
+            font-size: 20px;
+            list-style: none;
+            color: white;
+        }
+        footer{
+
+            height: 80px;
+            border: 2px solid black;
+
+        }
+        footer>p{
+            margin: 24px;
+            font-size: 20px;
+
+        }
+        section>section:nth-child(1){
+            position: relative;
+            background-color: #4a3a3a;
+            height: 150px;
+        }
+        section>section:nth-child(2) {
+            position: relative;
+            border: 1px solid red;
+            height: 350px;
+        }
+
+        div>img{
+            position: absolute;
+            width: 380px;
+            height: 150px;
+        }
+
+        div:nth-child(2){
+
+            position: absolute;
+            top: 0;
+            right: 750px;
+        }
+        div:nth-child(3){
+            position: absolute;
+            top: 0;
+            right: 380px;
+        }
+
+
 
     </style>
 </head>
@@ -74,10 +122,17 @@
     </nav>
     <section>
         <section>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div>
+                <img src="assets/image/photo.jpg">
+            </div>
+            <div>
+                <img src="assets/image/photo.jpg">
+            </div>
+            <div>
+                <img src="assets/image/photo.jpg">
+            </div>
         </section>
+        <section>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci cumque debitis dignissimos dolorem
             dolores esse et in magni minus molestiae necessitatibus recusandae, sapiente tempora ullam! Cumque
             exercitationem necessitatibus quas.</p>
@@ -102,11 +157,12 @@
         <p>Accusantium aut, consequuntur illo molestiae nemo neque perspiciatis, quos sed, sunt tempora tempore
             voluptas. Accusantium ea earum facilis harum laborum repellat voluptates. Eos harum incidunt modi pariatur
             veritatis vitae voluptas.</p>
+        </section>
     </section>
 
 </main>
 <footer>
-
+    <p>Developed By IJSE</p>
 </footer>
 
 </body>
