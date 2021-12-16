@@ -34,6 +34,7 @@
             color: red;
         }
         main {
+            position: relative;
             height: 500px;
 
         }
@@ -41,12 +42,14 @@
             position: absolute;
             background-color: purple;
             width: 20vw;
-           height: 500px;
+            top: 0;
+            bottom: 0;
         }
 
         main>section{
-            position: absolute;
+            position: relative;
             left: 20vw;
+            width: 80vw;
         }
 
         nav>ul{
@@ -56,46 +59,61 @@
             color: white;
         }
         footer{
-
             height: 80px;
             border: 2px solid black;
+            width: 100%;
 
         }
-        footer>p{
-            margin: 24px;
-            font-size: 20px;
-
-        }
-        section>section:nth-child(1){
+        main>section{
             position: relative;
+            top: 0;
+            bottom: 0;
+            width: 80vw;
+        }
+
+        section>section{
+            position: absolute;
             background-color: #4a3a3a;
             height: 150px;
-        }
-        section>section:nth-child(2) {
-            position: relative;
-            border: 1px solid red;
-            height: 350px;
+            width: 80vw;
         }
 
-        div>img{
+
+        section>div{
+            display: inline-block;
+        }
+
+        main>section>section>div>img{
             position: absolute;
-            width: 380px;
+            width:26.6%;
+            top: 0;
             height: 150px;
         }
 
-        div:nth-child(2){
-
+        section>div:nth-child(1){
             position: absolute;
             top: 0;
-            right: 750px;
+            left: 0;
         }
-        div:nth-child(3){
+        section>div:nth-child(2){
             position: absolute;
             top: 0;
-            right: 380px;
+            right: 0;
+            bottom: 0;
+            left:0;
+            margin: auto;
         }
+        section>div:nth-child(3){
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        p{
+            position: absolute;
+            top: 150px;
 
-
+            bottom: 0;
+        }
 
     </style>
 </head>
@@ -132,7 +150,8 @@
                 <img src="assets/image/photo.jpg">
             </div>
         </section>
-        <section>
+
+
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci cumque debitis dignissimos dolorem
             dolores esse et in magni minus molestiae necessitatibus recusandae, sapiente tempora ullam! Cumque
             exercitationem necessitatibus quas.</p>
@@ -157,12 +176,12 @@
         <p>Accusantium aut, consequuntur illo molestiae nemo neque perspiciatis, quos sed, sunt tempora tempore
             voluptas. Accusantium ea earum facilis harum laborum repellat voluptates. Eos harum incidunt modi pariatur
             veritatis vitae voluptas.</p>
-        </section>
+
     </section>
 
 </main>
 <footer>
-    <p>Developed By IJSE</p>
+
 </footer>
 
 </body>
