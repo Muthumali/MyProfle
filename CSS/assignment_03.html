@@ -2,79 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Assignment_03</title>
+    <title>Assignment_02</title>
     <link href="assets/style/normalize.css" rel="stylesheet">
     <style>
-        .bg{
-            background: white;
+        body>main{
+            width: 100vw;
+            height: 100vh;
             position: relative;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
         }
-        .out{
-            border: 20px solid gray;
-            height: 300px;
+        body>main>section{
+            position: relative;
             width: 300px;
+            height: 300px;
             border-radius: 100%;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            position: fixed;
-            margin: auto;
-            z-index: 10;
+            border: 15px solid gray;
         }
-        .in{
-            border: 20px solid red;
-            height: 260px;
-            width: 260px;
+        body>main>section>section{
+            position: relative;
+            width: 280px;
+            height: 280px;
             border-radius: 100%;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            position: absolute;
-            margin: auto;
-
-
+            border: 10px solid red;
         }
-        .center{
-            height: 225px;
-            width: 225px;
+        body>section>section>div{
+            width: 275px;
+            height: 275px;
             border-radius: 100%;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            position: absolute;
-            margin: auto;
-
         }
-
-
-
     </style>
 </head>
 <body>
 <main>
-    <section class="out">
-        <section class="in">
-        </section>
-    </section>
-    <section class="bg">
-        <section class="center" id="1">
-            <p>Hello</p>
-        </section>
-    </section>
-    <section class="bg">
-        <section class="center" id="2">
-            <p>Welcome To</p>
-        </section>
-    </section>
-    <section class="bg">
-        <section class="center" id="3">
-            <p>Institute of Java Software Engineering</p>
+    <section>
+        <section>
+
         </section>
     </section>
 </main>
