@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transition</title>
+    <link href="assets/css/fonts/css/all.css" rel="stylesheet">
+    <link href="assets/style/normalize.css" rel="stylesheet">
+    <style>
+        section{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            text-align: center;
+            justify-content: space-evenly ;
+            flex-direction: column;
+
+        }
+       div{
+            width: 50px;
+            height: 50px;
+            background: purple;
+           transition-property: width;
+           transition-duration: 5s;
+           position: relative;
+
+
+        }
+       div>a{
+           position: absolute;
+           color: white;
+           margin-top: 30px;
+           top: 0;
+       }
+       div>i{
+           position: absolute;
+           color: white;
+           margin-top: 30px;
+           size: 50px;
+
+       }
+       div:hover{
+           width: 200px;
+           transition-property: width;
+           transition-duration: 5s;
+       }
+    </style>
+</head>
+<body>
+<section>
+    <div><a>Menu One</a><i class="fas fa-home"></i></div>
+    <div><a>Menu Two</a><i class="fas fa-home"></i></div>
+    <div><a>Menu Three</a><i class="fas fa-home"></i></div>
+    <div><a>Menu Four</a><i class="fas fa-home"></i></div>
+    <div><a>Menu Five</a><i class="fas fa-home"></i></div>
+
+</section>
+
+</body>
+</html>
