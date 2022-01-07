@@ -19,13 +19,13 @@
             width: 350px;
             height: 350px;
             border-radius: 100%;
-            border: 20px solid darkslategray;
-            border-top: 20px solid red;
-            background-color: white;
+            border: 25px solid black;
+            border-top: 25px solid yellow;
+            background-color:white;
 
         }
         body>section>h1{
-            color: black;
+            color: red;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -35,7 +35,19 @@
             right: 0;
             top: 0;
             bottom: 0;
+            font-weight: bold;
+            font-size: 40px;
 
+        }
+        body>section:hover{
+            transform: rotate(360deg);
+            transition: all 2s;
+            cursor: pointer;
+        }
+
+        body>section:hover h1{
+            transform: rotate(-360deg);
+            transition: all 2s;
         }
     </style>
 </head>
