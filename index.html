@@ -377,6 +377,104 @@
         width: 100vw;
         height: 670px;
     }
+    main>section:nth-child(4)>section>p{
+        position: absolute;
+    }
+    main>section:nth-child(4)>section>p:nth-child(1){
+        top: 0;
+        left: 50px;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    #page4Circle1{
+        position: absolute;
+        width: 600px;
+        height:600px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        border-radius: 100%;
+    }
+    #page4Circle2{
+        position: absolute;
+        width: 200px;
+        height:200px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background-color: red;
+        border-radius: 100%;
+    }
+    #mySkills{
+        color: white;
+        position: absolute;
+        left: 40px;
+        top: 55px;
+        font-size: 30px;
+    }
+    #java>img{
+        width: 190px;
+        height: 190px;
+        position: absolute;
+        top: 0;
+        left: 200px;
+        border-radius: 100%;
+    }
+    #javafx>img{
+        width: 190px;
+        height: 190px;
+        position: absolute;
+        top: 110px;
+        left: 380px;
+        border-radius: 100%;
+    }
+    #hibernate>img{
+        width: 190px;
+        height: 190px;
+        position: absolute;
+        top: 310px;
+        left: 380px;
+        border-radius: 100%;
+    }
+    #mysql>img{
+        width: 190px;
+        height: 190px;
+        position: absolute;
+        bottom: 0;
+        left: 200px;
+        border-radius: 100%;
+    }
+    #css>img{
+        width: 190px;
+        height: 190px;
+        position: absolute;
+        top: 110px;
+        right: 380px;
+        border-radius: 100%;
+    }
+    #html>img{
+        width: 190px;
+        height: 190px;
+        position: absolute;
+        top: 310px;
+        right: 380px;
+        border-radius: 100%;
+    }
+    #page4Circle1:hover{
+        transform: rotate(360deg);
+        transition: all 2s;
+        cursor: pointer;
+    }
+    #page4Circle1:hover section p{
+        transform: rotate(-360deg);
+        transition: all 2s;
+    }
+
     /*end page 04 style*/
 
     /*Start Page 05 Style*/
@@ -389,7 +487,16 @@
         width: 100vw;
         height: 670px;
     }
-
+    main>section:nth-child(5)>section>p{
+        position: absolute;
+    }
+    main>section:nth-child(5)>section>p:nth-child(1){
+        top: 0;
+        left: 50px;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+    }
 
     /*end page 05 style*/
 
@@ -402,6 +509,16 @@
     main>section:nth-child(6)>img:nth-child(1){
         width: 100vw;
         height: 670px;
+    }
+    main>section:nth-child(6)>section>p{
+        position: absolute;
+    }
+    main>section:nth-child(6)>section>p:nth-child(1){
+        top: 0;
+        left: 50px;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
     }
 
     /*end page 06 style*/
@@ -416,6 +533,16 @@
     footer>section:nth-child(1)>img:nth-child(1){
         width: 100vw;
         height: 670px;
+    }
+    footer>section:nth-child(1)>section>p{
+        position: absolute;
+    }
+    footer>section:nth-child(1)>section>p:nth-child(1){
+        top: 0;
+        left: 50px;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
     }
 
     /*end footer style*/
@@ -512,22 +639,40 @@
 
     <!--page 4-->
     <section>
-
         <img src="assets/images/backgroundNew.jpg">
-
+        <section id="page4Circle1">
+            <div id="java"><img src="assets/images/java.jpg"></div>
+            <div id="javafx"><img src="assets/images/javafx_logo1.jpg"></div>
+            <div id="hibernate"><img src="assets/images/hibernate.png"></div>
+            <div id="mysql"><img src="assets/images/mysql.png"></div>
+            <div id="css"><img src="assets/images/css3-markup.jpg"></div>
+            <div id="html"><img src="assets/images/html.webp"></div>
+            <section id="page4Circle2">
+                <p id="mySkills">My Skills</p>
+            </section>
+        </section>
+        <section>
+            <p><u>Skills</u></p>
+        </section>
     </section>
 
     <!--page 5-->
     <section>
-
         <img src="assets/images/backgroundNew.jpg">
-
+        <section>
+           <div></div>
+        </section>
+        <section>
+            <p><u>Projects</u></p>
+        </section>
     </section>
 
     <!--page 6-->
     <section>
-
         <img src="assets/images/backgroundNew.jpg">
+        <section>
+            <p><u>Gallery</u></p>
+        </section>
     </section>
 
 </main>
@@ -535,10 +680,10 @@
 <footer>
     <section>
         <img src="assets/images/backgroundNew.jpg">
+        <section>
+            <p><u>About</u></p>
+        </section>
     </section>
-
-
-
 </footer>
 </body>
 
