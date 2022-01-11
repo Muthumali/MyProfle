@@ -7,13 +7,14 @@
     <link href="assets/style/normalize.css" rel="stylesheet">
     <link href="assets/images/IMG_20211106_094937.png" rel="icon">
     <meta content="width=device-width, initial-scale=1" name="viewport">
+
 <style>
 
     /*start header CSS Style*/
     header {
         position: relative;
         height: 60px;
-        background-color: #0a0a25;
+        background-color: #010134;
         box-shadow: inset 0px -2px 4px 0px #d9b7b7;
     }
     header > ul {
@@ -33,6 +34,15 @@
         cursor: pointer;
         color: red;
     }
+    header > ul > li>a {
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+    }
+    header>ul>li>a:hover{
+        cursor: pointer;
+        color: red;
+    }
     /*End Header Style*/
 
     /*page 01 style start*/
@@ -46,15 +56,6 @@
         height: 610px;
         margin-bottom: 0;
     }
-    main>section:nth-child(1)>section>img{
-       position: absolute;
-        width: 400px;
-        height: 480px;
-        top: 30px;
-        left: 70px;
-        border-radius: 100%;
-        background-color: plum;
-    }
     main>section:nth-child(1)>section>p{
         position: absolute;
     }
@@ -63,39 +64,50 @@
         color: white;
         font-size: 50px;
         bottom: 400px;
-        left: 700px;
+        right: 500px;
     }
     main>section:nth-child(1)>section>p:nth-child(2){
         position: absolute;
         color: white;
         font-size: 50px;
-        bottom: 340px;
-        left: 860px;
+        bottom: 400px;
+        right:400px;
     }
     main>section:nth-child(1)>section>p:nth-child(3){
         position: absolute;
         color: white;
-        font-size: 90px;
-        bottom: 150px;
-        left: 500px;
+        font-size: 80px;
+        bottom:250px;
+        right: 200px;
         font-family: "MV Boli";
     }
     main>section:nth-child(1)>section>p:nth-child(4){
         position: absolute;
-        color: #d7afe7;
+        color: white;
         font-size: 40px;
-        bottom: 5px;
-        left: 100px;
+        bottom: 230px;
+        right: 330px;
     }
     main>section:nth-child(1)>section>section>p{
         position: absolute;
         color: white;
-        font-size: 30px;
         text-align: center;
-        bottom: 120px;
-        left: 770px;
+        bottom: 60px;
+        left: 200px;
         width: 200px;
-        background-color: #9200c2;
+        font-family: 'Ubuntu', sans-serif;
+        background-color: transparent;
+        font-size: 25px;
+        text-shadow: 2px 3px black;
+        margin-top: 10px;
+        padding: 8px;
+        font-weight: bold;
+        border: 6px solid #00D2D3;
+        border-radius: 10px;
+       /* animation-name: shake;
+        animation-direction: alternate;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;*/
     }
     /*icon styles*/
     main>section:nth-child(1)>section:nth-child(2)>div{
@@ -157,6 +169,14 @@
         bottom: 50px;
         width: 70px;
         height: 70px;
+    }
+    #muthu>img{
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        top: 50px;
+        left: 100px;
+        border-radius: 100%;
     }
     /*end page 01 style*/
 
@@ -396,11 +416,8 @@
         position: absolute;
         width: 600px;
         height:600px;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        margin: auto;
+        top: 50px;
+        left: 160px;
         border-radius: 100%;
     }
     #page4Circle2{
@@ -479,6 +496,13 @@
         transform: rotate(-360deg);
         transition: all 2s;
     }
+    #skillPic>img{
+        position: absolute;
+        width: 400px;
+        height: 500px;
+        bottom: 0;
+        right: 100px;
+    }
 
     /*end page 04 style*/
 
@@ -509,14 +533,13 @@
         height: 500px;
         top: 100px;
         left: 50px;
-        border: 5px solid purple;
-        background-color:plum;
+        border: 5px solid blue;
     }
     #library>section>p:nth-child(1){
         position: absolute;
         top: 0;
         left: 50px;
-        color: black;
+        color: white;
         font-size: 30px;
         text-align: center;
     }
@@ -524,7 +547,7 @@
         position: absolute;
         top: 100px;
         left: 100px;
-        color: blue;
+        color: white;
         font-size: 20px;
         font-weight: bold;
     }
@@ -532,7 +555,7 @@
         position: absolute;
         top: 0;
         left: 530px;
-        color: black;
+        color: white;
         font-size: 30px;
         text-align: center;
     }
@@ -540,7 +563,7 @@
         position: absolute;
         top: 100px;
         left: 530px;
-        color: blue;
+        color:white;
         font-size: 20px;
         font-weight: bold;
     }
@@ -548,7 +571,7 @@
         position: absolute;
         top: 0;
         right: 100px;
-        color: black;
+        color: white;
         font-size: 30px;
         text-align: center;
     }
@@ -556,7 +579,7 @@
         position: absolute;
         top: 100px;
         right: 150px;
-        color: blue;
+        color: white;
         font-size: 20px;
         font-weight: bold;
     }
@@ -1004,7 +1027,7 @@
     }
     #Fpara{
         position: absolute;
-        color: wheat;
+        color: white;
         font-family: 'Lobster', cursive;
         font-size: 30px;
         top: 100px;
@@ -1013,61 +1036,42 @@
     #Fpara2{
         position: absolute;
         font-size: 30px;
-        background-color: #c2002b;
+        background-color: cornflowerblue;
+        border: 3px solid blue;
         color: white;
         bottom: 150px;
-        left: 600px;
+        left: 800px;
         text-align: center;
     }
-    #HireMe{
-        position: absolute;
-        font-size: 30px;
-        background-color: #c2002b;
-        color: white;
-        bottom: 150px;
-        left: 850px;
-        text-align: center;
-    }
-    #MyWorks{
-        position: absolute;
-        font-size: 30px;
-        background-color: #c2002b;
-        color: white;
-        bottom: 150px;
-        left: 1050px;
-        text-align: center;
-    }
+
     /*end footer style*/
-
-
-
 </style>
 
 </head>
 <body>
 <header>
     <ul>
-        <li>Home</li>
-        <li>Education</li>
-        <li>Activities</li>
-        <li>Skills</li>
-        <li>projects</li>
-        <li>Assignment</li>
-        <li>About Me</li>
+        <li><a href="#page1">Home</a></li>
+        <li><a href="#page2">Education</a></li>
+        <li><a href="#page3">Activities</a></li>
+        <li><a href="#page4">Skills</a></li>
+        <li><a href="#page5">projects</a></li>
+        <li><a href="#page6">Assignment</a></li>
+        <li><a href="#footerPage">About Me</a></li>
     </ul>
 
 </header>
 
 <main>
     <!--page 1 -->
-    <section>
-        <img src="assets/images/abstractDB.jpg">
-       <section><img src="assets/my/3.jpg"></section>
+    <section id="page1">
+        <img src="assets/NewImages/lap.jpg">
+       <section id="muthu"><img src="assets/images/myE.jpg"></section>
         <section><p>Hello...!</p>
         <p>I'm </p>
         <p>Muthu Dilrukshi</p>
-        <p><u>Software Engineer</u></p>
-           <!-- <section><p>Download CV</p></section>-->
+        <p><u>Full Stack Developer</u></p>
+           <section><p>Hire Me</p></section>
         </section>
         <section>
             <div> <img src="assets/images/icons8-slack-new-48.png"></div>
@@ -1083,8 +1087,9 @@
 
     </section>
     <!--page 2-->
-    <section>
-        <img src="assets/images/abstractDB.jpg">
+
+    <section id="page2">
+        <img src="assets/NewImages/p.jpg">
         <section>
             <div id="dip"><img src="assets/images/dip.png"></div>
             <div id="degree"><img src="assets/images/de.jpg"></div>
@@ -1110,8 +1115,8 @@
     </section>
 
     <!--page 3-->
-    <section>
-        <img src="assets/images/abstractDB.jpg">
+    <section id="page3">
+        <img src="assets/NewImages/p.jpg">
         <section>
             <div><img src="assets/images/guitar.jpg"></div>
             <div><img src="assets/images/songs.jpeg"></div>
@@ -1132,8 +1137,8 @@
     </section>
 
     <!--page 4-->
-    <section>
-        <img src="assets/images/abstractDB.jpg">
+    <section id="page4">
+        <img src="assets/NewImages/p.jpg">
         <section id="page4Circle1">
             <div id="java"><img src="assets/images/java.jpg"></div>
             <div id="javafx"><img src="assets/images/javafx_logo1.jpg"></div>
@@ -1144,15 +1149,17 @@
             <section id="page4Circle2">
                 <p id="mySkills">My Skills</p>
             </section>
+
         </section>
+        <section id="skillPic"><img src="assets/my/women.png"></section>
         <section>
             <p><u>Skills</u></p>
         </section>
     </section>
 
     <!--page 5-->
-    <section>
-        <img src="assets/images/abstractDB.jpg">
+    <section id="page5">
+        <img src="assets/NewImages/p.jpg">
         <section id="proSec" >
         <section id="library">
             <section>
@@ -1164,7 +1171,7 @@
                     <li>MYSQL</li>
                     <li>CSS</li>
                 </ul>
-                <p id="down1">Download Project</p>
+                <a href="https://github.com/Muthumali/LibraryManagementSystem" target="_blank"><p id="down1">View Project</p></a>
             </section>
            <div id="libraryPic"><img src="assets/libaryImage/1.png"></div>
           <div id="librarypicTwo"><img src="assets/libaryImage/2.png"></div>
@@ -1179,7 +1186,7 @@
                     <li>MYSQL</li>
                     <li>CSS</li>
                 </ul>
-                <p id="down2">Download Project</p>
+                <a href="https://github.com/Muthumali/LayeredArchitecture_POS_System" target="_blank"><p id="down2">View Project</p></a>
             </section>
             <div id="layeredpic1"><img src="assets/layerdImage/1.png"></div>
             <div id="layeredpic2"><img src="assets/layerdImage/2.png"></div>
@@ -1194,7 +1201,7 @@
                     <li>Hibernate</li>
                     <li>CSS</li>
                 </ul>
-                <p id="down3">Download Project</p>
+                <a href="https://github.com/Muthumali/Hibernate_System" target="_blank"><p id="down3">View Project</p></a>
             </section>
             <div id="hibernatepic1"><img src="assets/hibernateImage/1.png"></div>
             <div id="hibernatepic2"><img src="assets/hibernateImage/2.png"></div>
@@ -1208,8 +1215,8 @@
     </section>
 
     <!--page 6-->
-    <section>
-        <img src="assets/images/abstractDB.jpg">
+    <section id="page6">
+        <img src="assets/NewImages/p.jpg">
         <section id="mainLine">
             <div></div>
             <div></div>
@@ -1232,37 +1239,36 @@
             <p id="p1">CSS</p>
             <p id="p2">Transition</p>
             <p id="p3">Animation</p>
-            <p id="A1">Assignment_01</p>
-            <p id="A2">Assignment_02</p>
-            <p id="A3">Assignment_03</p>
-            <p id="A4">Assignment_04</p>
-            <p id="A5">Assignment_05</p>
-            <p id="A6">Assignment_06</p>
-            <p id="A7">Assignment_07</p>
-            <p id="A8">Assignment_08</p>
-            <p id="A9">Assignment_09</p>
-            <p id="A10">Assignment_10</p>
-            <p id="A11">Assignment_11</p>
+            <a href="http://localhost:63342/MyProfile/CSS/assignment_01.html?_ijt=1f57nqpeh0q39etu0asc1vrs6p&_ij_reload=RELOAD_ON_SAVE" target="_blank"><p id="A1">Assignment_01</p></a>
+            <a href="http://localhost:63342/MyProfile/CSS/assignment_02.html?_ijt=qsguiom23o3669apsani17b9fq&_ij_reload=RELOAD_ON_SAVE" target="_blank"><p id="A2">Assignment_02</p></a>
+            <a href="http://localhost:63342/MyProfile/CSS/assignment_03.html?_ijt=oi54j9l553ji5nnop64d00eabt&_ij_reload=RELOAD_ON_SAVE" target="_blank"><p id="A3">Assignment_03</p></a>
+            <a href="http://localhost:63342/MyProfile/CSS/assignment_04.html?_ijt=fej93agf80sq0gdi7le4n5h0v5&_ij_reload=RELOAD_ON_SAVE" target="_blank"><p id="A4">Assignment_04</p></a>
+            <a href="http://localhost:63342/MyProfile/CSS/assignment_05.html?_ijt=fej93agf80sq0gdi7le4n5h0v5&_ij_reload=RELOAD_ON_SAVE" target="_blank"><p id="A5">Assignment_05</p></a>
+            <a href="http://localhost:63342/MyProfile/Animations&Transitions/assignment_06.html?_ijt=u8sio313jirtl67kpruhge89fg&_ij_reload=RELOAD_ON_SAVE" target="_blank"><p id="A6">Assignment_06</p></a>
+            <a href="http://localhost:63342/MyProfile/Animations&Transitions/assignment_07.html?_ijt=icuues3dsdggim9g43kimlg07v&_ij_reload=RELOAD_ON_SAVE" target="_blank"><p id="A7">Assignment_07</p></a>
+            <a><p id="A8">Assignment_08</p></a>
+            <a><p id="A9">Assignment_09</p></a>
+            <a><p id="A10">Assignment_10</p></a>
+            <a><p id="A11">Assignment_11</p></a>
         </section>
     </section>
+
 
 </main>
 
 <footer>
-    <section>
-        <img src="assets/images/abstractDB.jpg">
+    <section id="footerPage">
+        <img src="assets/NewImages/p.jpg">
         <section>
             <img src="assets/my/2.jpg">
             <p id="Fpara">I am <b>Maddege Muthumali Dilrukshi</b>.<br>
-                Address  :  <b>Batacatiya Watta Aluthwala</b><br>
-                Birthday  :  <b>1999/05/07</b><br><br>
+                I am  <b>Full Stack Developer.</b><br>
+                I Studied at <b>Sangamitta girls college,Galle.</b> <br>I was bron on <b>May 07,1999.</b><br><br>
                 Email:<b><u><i>muthudil1999@gmail.com</i></u></b><br><br>
                 Mobile:<b>0760133752</b>
             </p>
 
-            <p id="Fpara2">Download CV</p>
-            <p id="HireMe">Hire Me</p>
-            <p id="MyWorks">My Works</p>
+            <a><p id="Fpara2">Download CV</p></a>
         </section>
         <section>
             <div> <img src="assets/images/icons8-slack-new-48.png"></div>
