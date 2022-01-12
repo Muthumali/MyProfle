@@ -5,17 +5,19 @@
     <title>My profile-Muthu Dilrukshi</title>
 
     <link href="assets/style/normalize.css" rel="stylesheet">
-    <link href="assets/images/IMG_20211106_094937.png" rel="icon">
+  <!--  <link href="assets/images/IMG_20211106_094937.png" rel="icon">-->
     <meta content="width=device-width, initial-scale=1" name="viewport">
 
 <style>
 
     /*start header CSS Style*/
     header {
-        position: relative;
+        position: fixed;
+        width: 100%;
         height: 60px;
         background-color: #010134;
         box-shadow: inset 0px -2px 4px 0px #d9b7b7;
+        z-index: 100;
     }
     header > ul {
         position: absolute;
@@ -43,17 +45,25 @@
         cursor: pointer;
         color: red;
     }
+    #dil>img{
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        border-radius: 100%;
+        top: 10px;
+        left: 10px;
+    }
     /*End Header Style*/
 
     /*page 01 style start*/
     main>section:nth-child(1) {
         width: 100vw;
-        height: 610px;
+        height: 670px;
         position: relative;
     }
     main>section:nth-child(1)>img:nth-child(1){
         width: 100vw;
-        height: 610px;
+        height: 670px;
         margin-bottom: 0;
     }
     main>section:nth-child(1)>section>p{
@@ -88,7 +98,7 @@
         bottom: 230px;
         right: 330px;
     }
-    main>section:nth-child(1)>section>section>p{
+    main>section:nth-child(1)>section>section>a>p{
         position: absolute;
         color: white;
         text-align: center;
@@ -104,66 +114,75 @@
         font-weight: bold;
         border: 6px solid #00D2D3;
         border-radius: 10px;
-       /* animation-name: shake;
-        animation-direction: alternate;
-        animation-duration: 1s;
-        animation-iteration-count: infinite;*/
+        animation: shake-animation 3s ease infinite;
+        transform-origin: 50% 50%;
     }
+    @keyframes shake-animation {
+        0% { transform:translate(0,0) }
+        1.78571% { transform:translate(5px,0) }
+        3.57143% { transform:translate(0,0) }
+        5.35714% { transform:translate(5px,0) }
+        7.14286% { transform:translate(0,0) }
+        8.92857% { transform:translate(5px,0) }
+        10.71429% { transform:translate(0,0) }
+        100% { transform:translate(0,0) }
+    }
+
     /*icon styles*/
     main>section:nth-child(1)>section:nth-child(2)>div{
        position: absolute;
         display: inline-block;
     }
-    main>section:nth-child(1)>section>div:nth-child(1)>img{
+    main>section:nth-child(1)>section>div:nth-child(1)>a>img{
         position: absolute;
         left: 500px;
         bottom: 50px;
         width: 70px;
         height: 70px;
     }
-    main>section:nth-child(1)>section>div:nth-child(2)>img{
+    main>section:nth-child(1)>section>div:nth-child(2)>a>img{
         position: absolute;
         left: 600px;
         bottom: 50px;
         width: 70px;
         height: 70px;
     }
-    main>section:nth-child(1)>section>div:nth-child(3)>img{
+    main>section:nth-child(1)>section>div:nth-child(3)>a>img{
         position: absolute;
         left: 700px;
         bottom: 50px;
         width: 70px;
         height: 70px;
     }
-    main>section:nth-child(1)>section>div:nth-child(4)>img{
+    main>section:nth-child(1)>section>div:nth-child(4)>a>img{
         position: absolute;
         left: 800px;
         bottom: 50px;
         width: 70px;
         height: 70px;
     }
-    main>section:nth-child(1)>section>div:nth-child(5)>img{
+    main>section:nth-child(1)>section>div:nth-child(5)>a>img{
         position: absolute;
         left: 900px;
         bottom: 50px;
         width: 70px;
         height: 70px;
     }
-    main>section:nth-child(1)>section>div:nth-child(6)>img{
+    main>section:nth-child(1)>section>div:nth-child(6)>a>img{
         position: absolute;
         left: 1000px;
         bottom: 50px;
         width: 70px;
         height: 70px;
     }
-    main>section:nth-child(1)>section>div:nth-child(7)>img{
+    main>section:nth-child(1)>section>div:nth-child(7)>a>img{
         position: absolute;
         left: 1100px;
         bottom: 50px;
         width: 70px;
         height: 70px;
     }
-    main>section:nth-child(1)>section>div:nth-child(8)>img{
+    main>section:nth-child(1)>section>div:nth-child(8)>a>img{
         position: absolute;
         left: 1200px;
         bottom: 50px;
@@ -172,12 +191,13 @@
     }
     #muthu>img{
         position: absolute;
-        width: 400px;
-        height: 400px;
-        top: 50px;
-        left: 100px;
+        width: 35%;
+        height: 60%;
+        top: 70px;
+        left: 80px;
         border-radius: 100%;
     }
+
     /*end page 01 style*/
 
     /*start page 02 style*/
@@ -243,6 +263,18 @@
         background-color: #12CBC4;
         bottom: 50px;
         left: 100px;
+        animation-name: example;
+        animation-duration: 10s;
+        animation-iteration-count: 100;
+
+    }
+    @keyframes example {
+        from {background-color:  #12CBC4;}
+        to {background-color: #0652DD;}
+    }
+    @keyframes example2 {
+        from {background-color: #0652DD ;}
+        to {background-color:#12CBC4 ;}
     }
     #sec2{
         position: absolute;
@@ -251,6 +283,9 @@
         background-color: #0652DD;
         bottom: 50px;
         left: 300px;
+        animation-name: example2;
+        animation-duration: 5s;
+        animation-iteration-count: 100;
     }
     #sec3{
         position: absolute;
@@ -259,6 +294,9 @@
         background-color: #12CBC4;
         bottom: 50px;
         left: 500px;
+        animation-name: example;
+        animation-duration: 5s;
+        animation-iteration-count: 100;
     }
     #sec4{
         position: absolute;
@@ -267,6 +305,9 @@
         background-color: #0652DD;
         bottom: 50px;
         left: 700px;
+        animation-name: example2;
+        animation-duration: 5s;
+        animation-iteration-count: 100;
     }
     #sec5{
         position: absolute;
@@ -275,6 +316,9 @@
         background-color: #12CBC4;
         bottom: 50px;
         left: 900px;
+        animation-name: example;
+        animation-duration: 5s;
+        animation-iteration-count: 100;
     }
     #sec6{
         position: absolute;
@@ -283,6 +327,9 @@
         background-color: #0652DD;
         bottom: 50px;
         left: 1100px;
+        animation-name: example2;
+        animation-duration: 5s;
+        animation-iteration-count: 100;
     }
     .para{
         text-align: center;
@@ -297,7 +344,6 @@
         font-size: 40px;
         font-weight: bold;
         font-family: "Arial Narrow";
-
     }
     /*end page 02 style*/
 
@@ -935,21 +981,21 @@
 
     /*end page 06 style*/
 
-    /*start footer style*/
+    /*start page 07 style*/
 
-    footer>section{
+  main>section:nth-child(7){
         position: relative;
         width: 100vw;
-        height: 670px;
+        height: 550px;
     }
-    footer>section:nth-child(1)>img:nth-child(1){
+    main>section:nth-child(7)>img:nth-child(1){
         width: 100vw;
-        height: 670px;
+        height: 550px;
     }
-    footer>section:nth-child(1)>section>p{
+    main>section:nth-child(7)>section>p{
         position: absolute;
     }
-    footer>section:nth-child(1)>section>p:nth-child(1){
+    main>section:nth-child(7)>section>p:nth-child(1){
         top: 0;
         left: 50px;
         color: white;
@@ -957,7 +1003,7 @@
         font-weight: bold;
         font-family: "Arial Narrow";
     }
-    footer>section:nth-child(1)>section>img{
+    main>section:nth-child(7)>section>img{
         position: absolute;
         width: 300px;
         height: 450px;
@@ -965,60 +1011,60 @@
         left: 100px;
         border-radius: 100%;
     }
-    footer>section:nth-child(1)>section:nth-child(2)>div{
+    main>section:nth-child(7)>section:nth-child(2)>div{
         position: absolute;
         display: inline-block;
     }
-    footer>section:nth-child(1)>section>div:nth-child(1)>img{
+    main>section:nth-child(7)>section>div:nth-child(1)>a>img{
         position: absolute;
         right: 250px;
         bottom: 50px;
         width: 70px;
         height: 70px;
     }
-    footer>section:nth-child(1)>section>div:nth-child(2)>img{
+    main>section:nth-child(7)>section>div:nth-child(2)>a>img{
         position: absolute;
         right: 350px;
         bottom: 50px;
         width: 70px;
         height: 70px;
     }
-    footer>section:nth-child(1)>section>div:nth-child(3)>img{
+    main>section:nth-child(7)>section>div:nth-child(3)>a>img{
         position: absolute;
         right: 450px;
         bottom: 50px;
         width: 70px;
         height: 70px;
     }
-    footer>section:nth-child(1)>section>div:nth-child(4)>img{
+    main>section:nth-child(7)>section>div:nth-child(4)>a>img{
         position: absolute;
         right: 550px;
         bottom: 50px;
         width: 70px;
         height: 70px;
     }
-    footer>section:nth-child(1)>section>div:nth-child(5)>img{
+    main>section:nth-child(7)>section>div:nth-child(5)>a>img{
         position: absolute;
         right: 650px;
         bottom: 50px;
         width: 70px;
         height: 70px;
     }
-    footer>section:nth-child(1)>section>div:nth-child(6)>img{
+    main>section:nth-child(7)>section>div:nth-child(6)>a>img{
         position: absolute;
         right: 750px;
         bottom: 50px;
         width: 70px;
         height: 70px;
     }
-    footer>section:nth-child(1)>section>div:nth-child(7)>img{
+    main>section:nth-child(7)>section>div:nth-child(7)>a>img{
         position: absolute;
         right: 850px;
         bottom: 50px;
         width: 70px;
         height: 70px;
     }
-    footer>section:nth-child(1)>section>div:nth-child(8)>img{
+    main>section:nth-child(7)>section>div:nth-child(8)>a>img{
         position: absolute;
         right: 950px;
         bottom: 50px;
@@ -1039,17 +1085,616 @@
         background-color: cornflowerblue;
         border: 3px solid blue;
         color: white;
-        bottom: 150px;
-        left: 800px;
+        bottom: 30px;
+        left: 1120px;
         text-align: center;
     }
 
+    /*end page 07 style*/
+
+    /*start footer style*/
+    footer{
+        position: relative;
+        width: 100vw;
+        height: 60px;
+        background-color: #050417;
+        box-shadow: inset 0px -2px 4px 0px #d9b7b7;
+    }
+    #end{
+        position: absolute;
+        font-size: 20px;
+        font-family: 'Lobster', cursive;
+        margin-top: 0;
+        color: white;
+        font-weight: bold;
+        top: 10px;
+        left: 450px;
+    }
+    #last{
+        position: absolute;
+        font-size: 30px;
+        margin-top: 0;
+      top: 5px;
+        left: 680px;
+        color: dodgerblue;
+        font-weight: bold;
+    }
+
     /*end footer style*/
+
+    @media all and (max-width: 320px) {
+        header {
+            width: 100%;
+            position: fixed;
+        }
+
+        header > ul {
+            right: 920px;
+            margin-top: 22px;
+            font-size: 5px;
+        }
+        header > ul > li {
+            padding: 0 7px 0 -3px;
+        }
+        #muthu>img {
+            left: 8%;
+            width: 86%;
+            height: 35%;
+        }
+        main>section:nth-child(2)>img:nth-child(1) {
+            width: 100%;
+            height: 670px;
+        }
+        main>section:nth-child(3)>img:nth-child(1) {
+            width: 100%;
+            height: 670px;
+        }
+        main>section:nth-child(4)>img:nth-child(1) {
+            width: 100%;
+            height: 670px;
+        }
+        main>section:nth-child(1)>img:nth-child(1) {
+            width: 100%;
+            height: 670px;
+            margin-bottom: 0;
+        }
+        main>section:nth-child(1)>section>p:nth-child(1) {
+            font-size: 23px;
+            bottom: 44%;
+            right: 140px;
+        }
+        main>section:nth-child(1)>section>p:nth-child(2){
+            font-size: 23px;
+            bottom: 44%;
+            right:99px;
+        }
+        main>section:nth-child(1)>section>p:nth-child(3){
+            font-size: 40px;
+            bottom:34%;
+            right: 4%;
+        }
+        main>section:nth-child(1)>section>p:nth-child(4){
+            font-size: 30px;
+            bottom: 28%;
+            right: 8%;
+        }
+        main>section:nth-child(1)>section>section>p{
+            bottom: 16%;
+            left: 32%;
+            width: 100Px;
+
+        }
+        main>section:nth-child(1)>section>div:nth-child(1)>img{
+            left: 8%;
+            bottom: 7%;
+            width: 37px;
+            height: 37px;
+        }
+        main>section:nth-child(1)>section>div:nth-child(2)>img{
+            left:18% ;
+            bottom: 7%;
+            width: 37px;
+            height: 37px;
+        }
+        main>section:nth-child(1)>section>div:nth-child(3)>img{
+            left: 28%;
+            bottom: 7%;
+            width: 37px;
+            height: 37px;
+        }
+        main>section:nth-child(1)>section>div:nth-child(4)>img{
+            left: 38%;
+            bottom: 7%;
+            width: 37px;
+            height: 37px;
+        }
+        main>section:nth-child(1)>section>div:nth-child(5)>img{
+            left: 48%;
+            bottom: 7%;
+            width: 37px;
+            height: 37px;
+        }
+        main>section:nth-child(1)>section>div:nth-child(6)>img{
+            left: 58%;
+            bottom: 7%;
+            width: 37px;
+            height: 37px;
+        }
+        main>section:nth-child(1)>section>div:nth-child(7)>img{
+            left: 70%;
+            bottom: 7%;
+            width: 37px;
+            height: 31px;
+        }
+        main>section:nth-child(1)>section>div:nth-child(8)>img{
+            left: 82%;
+            bottom: 7%;
+            width: 37px;
+            height: 37px;
+        }
+
+        /*page 02*/
+        #pee>img{
+            width: 55px;
+            left: 3px;
+        }
+        #child>img{
+            width: 55px;
+            left: 57px;
+        }
+        #school>img{
+            width: 55px;
+            left: 113px;
+        }
+        #schoolal>img{
+            width: 55px;
+            left: 162px;
+        }
+        #dip>img{
+            width: 55px;
+            bottom: 321px;
+            left: 218px;
+        }
+        #degree>img{
+            width: 55px;
+            bottom: 362px;
+            left: 272px;
+            border-radius: 50%;
+        }
+        #sec1{
+            width: 56px;
+            left: 0px;
+        }
+        #sec2{
+            width: 56px;
+            left:56px;
+        }
+        #sec3{
+            width: 56px;
+            left: 112px;
+        }
+        #sec4{
+            width: 56px;
+            left: 168px;
+        }
+        #sec5{
+            width:56px;
+            left: 224px;
+        }
+        #sec6{
+            width: 56px;
+            left: 274px;
+        }
+        .para{
+            font-size: 8px;
+        }
+        #edu{
+            font-size: 30px;
+        }
+
+        /*page 03*/
+        main>section:nth-child(3)>section>div:nth-child(1)>img{
+            width: 160px;
+            height: 100px;
+            bottom: 110px;
+            right: 160px;
+        }
+        main>section:nth-child(3)>section>div:nth-child(2)>img{
+            width: 160px;
+            height: 100px;
+            bottom: 110px;
+            right:0;
+        }
+        main>section:nth-child(3)>section>div:nth-child(3)>img{
+            width: 160px;
+            height: 100px;
+            bottom: 483px;
+            right: 160px;
+        }
+        main>section:nth-child(3)>section>div:nth-child(4)>img{
+            width: 160px;
+            height: 100px;
+            bottom: 483px;
+           right: 0;
+        }
+        main>section:nth-child(3)>section>div:nth-child(5)>img{
+            width: 160px;
+            height: 100px;
+            bottom: 300px;
+            right: 160px;
+        }
+        main>section:nth-child(3)>section>div:nth-child(6)>img{
+            width: 160px;
+            height: 100px;
+            bottom: 300px;
+            right: 0;
+        }
+        main>section:nth-child(3)>section>p:nth-child(1){
+            font-size: 30px;
+        }
+        main>section:nth-child(3)>section>p:nth-child(2){
+            bottom: 397px;
+            left: 80px;
+            font-size: 17px;
+        }
+        main>section:nth-child(3)>section>p:nth-child(3){
+            bottom: 7px;
+            left: 80px;
+            font-size: 17px;
+        }
+        main>section:nth-child(3)>section>p:nth-child(4) {
+            bottom: 216px;
+            right: 60px;
+            font-size: 17px;
+        }
+        /*page 04*/
+        main>section:nth-child(4)>section>p:nth-child(1){
+            font-size: 30px;
+        }
+        #page4Circle1{
+            width: 182px;
+            height: 465px;
+            top: 50px;
+            left: 99px;
+        }
+        #page4Circle2{
+            width: 100px;
+            height:100px;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            background-color: #0652DD;
+            border-radius: 100%;
+        }
+        #mySkills{
+            color: white;
+            position: absolute;
+            left: 30px;
+            top: 10px;
+            font-size: 20px;
+        }
+        #java>img{
+            top: 78px;
+            left: 41px;
+            width: 100px;
+            height: 100px;
+        }
+        #javafx>img{
+            width: 100px;
+            height: 100px;
+            top: 128px;
+            left: 130px;
+        }
+        #hibernate>img{
+            width: 100px;
+            height: 100px;
+            top: 229px;
+            left: 133px;
+        }
+        #mysql>img{
+            width: 100px;
+            height: 100px;
+            top: 287px;
+            left: 41px;
+        }
+        #css>img{
+            width: 100px;
+            height: 100px;
+            top: 128px;
+            left: -50px;
+        }
+        #html>img{
+            width: 100px;
+            height: 100px;
+            top: 232px;
+            left: -47px;
+        }
+        #page4Circle1:hover{
+            transform: rotate(360deg);
+            transition: all 2s;
+            cursor: pointer;
+        }
+        #page4Circle1:hover section p{
+            transform: rotate(-360deg);
+            transition: all 2s;
+        }
+        #skillPic>img{
+            width: 206px;
+            height: 225px;
+            right: -23px;
+        }
+        main>section:nth-child(5)>img:nth-child(1) {
+            width: 100%;
+            height: 670px;
+        }
+
+        main>section:nth-child(6)>img:nth-child(1) {
+            width: 100%;
+            height: 670px;
+        }
+        main>section:nth-child(7)>img:nth-child(1) {
+            width: 100%;
+            height: 550px;
+        }
+        /*page 06*/
+        main>section:nth-child(5)>section>p:nth-child(1){
+            font-size: 30px;
+        }
+        #proSec {
+            width: 85%;
+            height: 84%;
+            top: 78px;
+            left: 22px;
+        }
+        #library>section>p:nth-child(1) {
+            position: absolute;
+            left: 74px;
+            color: white;
+            font-size: 19px;
+        }
+        #library>section>ul {
+            position: absolute;
+            top: 53px;
+            left: 39px;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        #layerd>section>ul{
+            position: absolute;
+            top: 100px;
+            left: 530px;
+            color:white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #hibernateProject>section>p:nth-child(1){
+            position: absolute;
+            top: 0;
+            right: 100px;
+            color: white;
+            font-size: 19px;
+            text-align: center;
+        }
+        #hibernateProject>section>ul{
+            position: absolute;
+            top: 100px;
+            right: 150px;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        #down1{
+            position: absolute;
+            top: 230px;
+            left: 90px;
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            background-color: red;
+            font-family: 'Lobster', cursive;
+        }
+        #down2{
+            position: absolute;
+            top: 230px;
+            left:530px;
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            background-color: red;
+            font-family: 'Lobster', cursive;
+        }
+        #down3{
+            position: absolute;
+            top: 230px;
+            right: 90px;
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            background-color: red;
+            font-family: 'Lobster', cursive;
+        }
+        #libraryPic>img{
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            bottom: 100px;
+            left: 40px;
+        }
+        #librarypicTwo>img{
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            bottom: 30px;
+            left: 140px;
+        }
+        #layeredpic1>img{
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            bottom: 100px;
+            left: 480px;
+        }
+        #layeredpic2>img{
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            bottom: 30px;
+            left: 560px;
+        }
+        #hibernatepic1>img{
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            bottom: 100px;
+            right: 140px;
+        }
+        #hibernatepic2>img{
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            bottom: 30px;
+            right: 40px;
+        }
+        footer {
+            position: relative;
+            width: 100vw;
+            height: 60px;
+            background-color: #050417;
+            box-shadow: inset 0px -2px 4px 0px #d9b7b7;
+        }
+        main>section:nth-child(5) {
+            position: relative;
+            width: 100vw;
+            height: 670px;
+        }
+        #libraryPic>img {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            bottom: 445px;
+            left: 149px;
+        }
+        #librarypicTwo>img {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            bottom: 418px;
+            left: 172px;
+        }
+        #layerd>section>p:nth-child(1) {
+            position: absolute;
+            top: 156px;
+            left: 102px;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+        #layerd>section>ul {
+            top: 213px;
+            left: 28px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        #hibernateProject>section>p:nth-child(1) {
+            top: 324px;
+            right: 100px;
+            font-size: 19px;
+            text-align: center;
+        }
+        #hibernateProject>section>ul {
+            top: 386px;
+            right: 179px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        #dil>img{
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            top: 10px;
+            left: 20px;
+        }
+        #layeredpic1>img {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            bottom: 284px;
+            left: 145px;
+        }
+        #layeredpic2>img {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            bottom: 253px;
+            left: 180px;
+        }
+        #hibernatepic1>img {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            bottom: 115px;
+            right: 75px;
+        }
+        #hibernatepic2>img {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            bottom: 81px;
+            right: 30px;
+        }
+        #hibernatepic2>img {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            bottom: 81px;
+            right: 30px;
+        }
+        #down1 {
+            position: absolute;
+            top: 143px;
+            left: 112px;
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            background-color: red;
+            font-family: 'Lobster', cursive;
+        }
+
+            #down2 {
+                position: absolute;
+                top: 305px;
+                left: 112px;
+                color: white;
+                font-size: 14px;
+                text-align: center;
+                background-color: red;
+                font-family: 'Lobster', cursive;
+            }
+        #down3 {
+            position: absolute;
+            top: 488px;
+            right: 110px;
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            background-color: red;
+            font-family: 'Lobster', cursive;
+        }
+        main>section:nth-child(6) {
+            position: relative;
+            width: 100vw;
+            height: 670px;
+        }
+    }
 </style>
 
 </head>
 <body>
 <header>
+    <div id="dil"><img src="assets/images/myE.jpg"></div>
     <ul>
         <li><a href="#page1">Home</a></li>
         <li><a href="#page2">Education</a></li>
@@ -1063,25 +1708,27 @@
 </header>
 
 <main>
+
+
     <!--page 1 -->
     <section id="page1">
         <img src="assets/NewImages/lap.jpg">
-       <section id="muthu"><img src="assets/images/myE.jpg"></section>
+        <section id="muthu"><img src="assets/images/myE.jpg"></section>
         <section><p>Hello...!</p>
-        <p>I'm </p>
-        <p>Muthu Dilrukshi</p>
-        <p><u>Full Stack Developer</u></p>
-           <section><p>Hire Me</p></section>
+            <p>I'm </p>
+            <p>Muthu Dilrukshi</p>
+            <p><u>Full Stack Developer</u></p>
+            <section><a href="https://wa.me/qr/M3GRLX7HLN2GM1" target="_blank"><p>Hire Me</p></a></section>
         </section>
         <section>
-            <div> <img src="assets/images/icons8-slack-new-48.png"></div>
-            <div> <img src="assets/images/icons8-github-48.png"></div>
-            <div> <img src="assets/images/icons8-linkedin-48.png"></div>
-            <div> <img src="assets/images/icons8-twitter-squared-48.png"></div>
-            <div> <img src="assets/images/icons8-instagram-48.png"></div>
-            <div> <img src="assets/images/icons8-facebook-80.png"></div>
-            <div> <img src="assets/images/icons8-whatsapp-64.png"></div>
-            <div> <img src="assets/images/icons8-youtube-48.png"></div>
+            <div><a href="https://app.slack.com/client/T02HHPFUME3/D02HHQ4USTH/user_profile/U02HYF6NRM1" target="_blank"><img src="assets/images/icons8-slack-new-48.png"></a> </div>
+            <div> <a  href="https://github.com/Muthumali" target="_blank"><img src="assets/images/icons8-github-48.png"></a> </div>
+            <div> <a  href="https://www.linkedin.com/in/muthumalidilrukshi/" target="_blank"><img src="assets/images/icons8-linkedin-48.png"></a> </div>
+            <div><a href="https://twitter.com/muthudil1999?t=Kuu8wXojPj9XgxZypwcTOQ&s=08" target="_blank"> <img src="assets/images/icons8-twitter-squared-48.png"></a> </div>
+            <div> <a href="https://www.instagram.com/muthu_dilrukshi?r=nametag" target="_blank"><img src="assets/images/icons8-instagram-48.png"></a> </div>
+            <div><a href="https://www.facebook.com/profile.php?id=100069393859911https://www.facebook.com/profile.php?id=100069393859911" target="_blank"> <img src="assets/images/icons8-facebook-80.png"></a> </div>
+            <div><a href="https://wa.me/qr/M3GRLX7HLN2GM1" target="_blank"> <img src="assets/images/icons8-whatsapp-64.png"></a> </div>
+            <div><a href="https://youtube.com/channel/UC5e_FVVAZop43IGd9YAfaxg" target="_blank"> <img src="assets/images/icons8-youtube-48.png"></a> </div>
             <div></div>
         </section>
 
@@ -1102,9 +1749,9 @@
             <section id="sec1"><p class="para">I started my Education<br> Aluthwla Maha Vidyala.</p></section>
             <section id="sec2"><p class="para">I passed  the scholarship examination and <br>entered sangamitta girls college.</p></section>
             <section id="sec3"><p class="para">I passed O/L examination get five "A" passes<br> & three "C" passes & one "S" Passes.</p></section>
-                <section id="sec4"><p class="para">I passed A/L Examination in<br> maths stream.</p></section>
-                <section id="sec5"><p class="para">I started IJSE -software <br>engineering graduate diploma.</p></section>
-                    <section id="sec6"><p class="para">SOFTWARE ENGINEERING<br> GRADUATE DEGREE</p></section>
+            <section id="sec4"><p class="para">I passed A/L Examination in<br> maths stream.</p></section>
+            <section id="sec5"><p class="para">I started IJSE -software <br>engineering graduate diploma.</p></section>
+            <section id="sec6"><p class="para">SOFTWARE ENGINEERING<br> GRADUATE DEGREE</p></section>
             <p id="y1">(2005)</p>
             <p id="y2">(2011)</p>
             <p id="y3">(2015)</p>
@@ -1161,51 +1808,51 @@
     <section id="page5">
         <img src="assets/NewImages/p.jpg">
         <section id="proSec" >
-        <section id="library">
-            <section>
-                <p><u>Library Management <br>System</u></p>
-                <ul>
-                    <li>java</li>
-                    <li>javafx</li>
-                    <li>mvc</li>
-                    <li>MYSQL</li>
-                    <li>CSS</li>
-                </ul>
-                <a href="https://github.com/Muthumali/LibraryManagementSystem" target="_blank"><p id="down1">View Project</p></a>
+            <section id="library">
+                <section>
+                    <p><u>Library Management <br>System</u></p>
+                    <ul>
+                        <li>java</li>
+                        <li>javafx</li>
+                        <li>mvc</li>
+                        <li>MYSQL</li>
+                        <li>CSS</li>
+                    </ul>
+                    <a href="https://github.com/Muthumali/LibraryManagementSystem" target="_blank"><p id="down1">View Project</p></a>
+                </section>
+                <div id="libraryPic"><img src="assets/libaryImage/1.png"></div>
+                <div id="librarypicTwo"><img src="assets/libaryImage/2.png"></div>
             </section>
-           <div id="libraryPic"><img src="assets/libaryImage/1.png"></div>
-          <div id="librarypicTwo"><img src="assets/libaryImage/2.png"></div>
-        </section>
-        <section id="layerd">
-            <section>
-                <p><u>Layered POS<br> System</u></p>
-                <ul>
-                    <li>java</li>
-                    <li>javafx</li>
-                    <li>Layered</li>
-                    <li>MYSQL</li>
-                    <li>CSS</li>
-                </ul>
-                <a href="https://github.com/Muthumali/LayeredArchitecture_POS_System" target="_blank"><p id="down2">View Project</p></a>
+            <section id="layerd">
+                <section>
+                    <p><u>Layered POS<br> System</u></p>
+                    <ul>
+                        <li>java</li>
+                        <li>javafx</li>
+                        <li>Layered</li>
+                        <li>MYSQL</li>
+                        <li>CSS</li>
+                    </ul>
+                    <a href="https://github.com/Muthumali/LayeredArchitecture_POS_System" target="_blank"><p id="down2">View Project</p></a>
+                </section>
+                <div id="layeredpic1"><img src="assets/layerdImage/1.png"></div>
+                <div id="layeredpic2"><img src="assets/layerdImage/2.png"></div>
             </section>
-            <div id="layeredpic1"><img src="assets/layerdImage/1.png"></div>
-            <div id="layeredpic2"><img src="assets/layerdImage/2.png"></div>
-        </section>
-        <section id="hibernateProject">
-            <section>
-                <p><u>Hibernate POS <br>System</u></p>
-                <ul>
-                    <li>java</li>
-                    <li>javafx</li>
-                    <li>Layered</li>
-                    <li>Hibernate</li>
-                    <li>CSS</li>
-                </ul>
-                <a href="https://github.com/Muthumali/Hibernate_System" target="_blank"><p id="down3">View Project</p></a>
+            <section id="hibernateProject">
+                <section>
+                    <p><u>Hibernate POS <br>System</u></p>
+                    <ul>
+                        <li>java</li>
+                        <li>javafx</li>
+                        <li>Layered</li>
+                        <li>Hibernate</li>
+                        <li>CSS</li>
+                    </ul>
+                    <a href="https://github.com/Muthumali/Hibernate_System" target="_blank"><p id="down3">View Project</p></a>
+                </section>
+                <div id="hibernatepic1"><img src="assets/hibernateImage/1.png"></div>
+                <div id="hibernatepic2"><img src="assets/hibernateImage/2.png"></div>
             </section>
-            <div id="hibernatepic1"><img src="assets/hibernateImage/1.png"></div>
-            <div id="hibernatepic2"><img src="assets/hibernateImage/2.png"></div>
-        </section>
         </section>
         <section>
             <p><u>Projects</u></p>
@@ -1253,39 +1900,45 @@
         </section>
     </section>
 
+    <!--page7-->
 
-</main>
-
-<footer>
-    <section id="footerPage">
+  <section id="footerPage">
         <img src="assets/NewImages/p.jpg">
         <section>
             <img src="assets/my/2.jpg">
             <p id="Fpara">I am <b>Maddege Muthumali Dilrukshi</b>.<br>
                 I am  <b>Full Stack Developer.</b><br>
                 I Studied at <b>Sangamitta girls college,Galle.</b> <br>I was bron on <b>May 07,1999.</b><br><br>
-                Email:<b><u><i>muthudil1999@gmail.com</i></u></b><br><br>
-                Mobile:<b>0760133752</b>
+                Email:<b><u><i><a href="https://muthudil199@gmail.com">muthudil1999@gmail.com</a></i></u></b><br><br>
+                Mobile:<b><a href="tel:+94760133752">0760133752</a></b>
             </p>
 
             <a><p id="Fpara2">Download CV</p></a>
         </section>
         <section>
-            <div> <img src="assets/images/icons8-slack-new-48.png"></div>
-            <div> <img src="assets/images/icons8-github-48.png"></div>
-            <div> <img src="assets/images/icons8-linkedin-48.png"></div>
-            <div> <img src="assets/images/icons8-twitter-squared-48.png"></div>
-            <div> <img src="assets/images/icons8-instagram-48.png"></div>
-            <div> <img src="assets/images/icons8-facebook-80.png"></div>
-            <div> <img src="assets/images/icons8-whatsapp-64.png"></div>
-            <div> <img src="assets/images/icons8-youtube-48.png"></div>
+            <div><a href="https://app.slack.com/client/T02HHPFUME3/D02HHQ4USTH/user_profile/U02HYF6NRM1" target="_blank"><img src="assets/images/icons8-slack-new-48.png"></a> </div>
+            <div> <a  href="https://github.com/Muthumali" target="_blank"><img src="assets/images/icons8-github-48.png"></a> </div>
+            <div> <a  href="https://www.linkedin.com/in/muthumalidilrukshi/" target="_blank"><img src="assets/images/icons8-linkedin-48.png"></a> </div>
+            <div><a href="https://twitter.com/muthudil1999?t=Kuu8wXojPj9XgxZypwcTOQ&s=08" target="_blank"> <img src="assets/images/icons8-twitter-squared-48.png"></a> </div>
+            <div> <a href="https://www.instagram.com/muthu_dilrukshi?r=nametag" target="_blank"><img src="assets/images/icons8-instagram-48.png"></a> </div>
+            <div><a href="https://www.facebook.com/profile.php?id=100069393859911https://www.facebook.com/profile.php?id=100069393859911" target="_blank"> <img src="assets/images/icons8-facebook-80.png"></a> </div>
+            <div><a href="https://wa.me/qr/M3GRLX7HLN2GM1" target="_blank"> <img src="assets/images/icons8-whatsapp-64.png"></a> </div>
+            <div><a href="https://youtube.com/channel/UC5e_FVVAZop43IGd9YAfaxg" target="_blank"> <img src="assets/images/icons8-youtube-48.png"></a> </div>
             <div></div>
         </section>
         <section>
             <p><u>About Me</u></p>
         </section>
     </section>
+</main>
+
+<footer>
+    <address>
+        <p id="end">All rights reserved by</p>
+        <p id="last">Muthu Dilrukshi</p>
+    </address>
 </footer>
+
 </body>
 
 </html>
