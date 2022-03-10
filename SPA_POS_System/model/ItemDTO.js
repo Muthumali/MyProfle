@@ -1,4 +1,4 @@
-function ItemDTO(itemCode,itemName,price,itemQTY){
+function ItemDTO(itemCode,itemName,itemQTY,price){
     var __itemCode=itemCode;
     var __itemName=itemName;
     var __itemQTY=itemQTY;
