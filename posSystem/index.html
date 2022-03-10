@@ -7,43 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="assets/boostrap/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        main{
-            position: relative;
-            width: 100vw;
-            height: 90vh;
+        .nav-item{
+            font-weight: bold;
+            font-size: 20px;
         }
 
-       #pageone{
-           width: 100%;
-           height: 100%;
-           background-color: #030310;
-       }
-       .nav-item{
-           font-weight: bold;
-           font-size: 20px;
-       }
-
-       .navbar-brand{
-           font-weight: bold;
-           font-size: 30px;
-           font-family: 'Lobster', cursive;
-       }
-       .img-thumbnail{
-           width: 332px;
-           height: 240px;
-       }
-       .p-3{
-           width: 300px;
-           height: 240px;
-           margin: 30px 15px 5px 15px;
-           display: inline-block;
-           font-family: 'Ubuntu', sans-serif;
-           font-size: 40px;
-           text-align: center;
-           font-weight: bold;
-
-       }
-
+        body>header>nav>div>a{
+            color: yellow !important;
+        }
+        .navbar-brand{
+            font-weight: bold;
+            font-size: 30px;
+            font-family: 'Lobster', cursive;
+        }
+        .container-fluid{
+            padding-left: 0;
+            padding-right: 0;
+        }
     </style>
 </head>
 <body>
@@ -74,20 +54,11 @@
         </div>
     </nav>
 </header>
-<main>
-    <section id="pageone">
-        <img src="assets/image/1.jpeg" class="img-thumbnail" alt="...">
-        <img src="assets/image/2.jpg" class="img-thumbnail" alt="...">
-        <img src="assets/image/5.jpg" class="img-thumbnail" alt="...">
-        <img src="assets/image/6.jpg" class="img-thumbnail" alt="...">
-
-        <div class="p-3 mb-2 bg-warning text-dark bg-opacity-75">Total Items</div>
-        <div class="p-3 mb-2 bg-warning text-dark bg-opacity-75">Total Customers</div>
-        <div class="p-3 mb-2 bg-warning text-dark bg-opacity-75">Total Orders</div>
-        <div class="p-3 mb-2 bg-warning text-dark bg-opacity-75">Total Of Workers</div>
-    </section>
-
-</main>
-
+<section class="container-fluid " id="dashForm">
+    <div class="has-bg-img ">
+        <img class="bg-img position-relative " src="assets/image/back.png" alt="..." style="width: 100% ;height: 97vh ">
+    </div>
+</section>
 </body>
+
 </html>
