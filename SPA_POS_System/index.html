@@ -73,7 +73,8 @@
                         <h1 class="h1 mb-3">Manage Customer</h1>
                         <div class="mb-3">
                             <label class="form-label" for="srcCusID">Search Customer</label>
-                            <input class="form-control" id="srcCusID" placeholder="Customer ID" type="text">
+                            <input class="form-control" id="srcCusID" placeholder="Customer ID" type="text"><br>
+                            <button type="button" class="btn btn-success" id="searchCustomer">Search</button>
                         </div>
                         <button type="button" class="btn btn-success" id="addCustomer">Add</button>
                         <button type="button" class="btn btn-danger" id="deleteCustomer">Delete</button>
@@ -128,7 +129,8 @@
                 <h1 class="h1 mb-3">Manage Item</h1>
                 <div class="mb-3">
                     <label class="form-label" for="srcItemID">Search Customer</label>
-                    <input class="form-control" id="srcItemID" placeholder="Item ID" type="text">
+                    <input class="form-control" id="srcItemID" placeholder="Item ID" type="text"><br>
+                    <button type="button" class="btn btn-success" id="searchItem">Search</button>
                 </div>
                 <button type="button" class="btn btn-success" id="addItem">Add</button>
                 <button type="button" class="btn btn-danger" id="deleteItem">Delete</button>
@@ -173,201 +175,176 @@
 </section>
 <!--Item Content End-->
 
-
-<!--Order Content Start-->
 <section class="container-fluid" id="orderForm">
-    <div class="container-fluid mt-4">
-        <!--main tile-->
-        <div class="jumbotron pt-4">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="card">
-                        <div class="card-header bg-warning font-weight-bolder">Customer Details</div>
-                        <div class="card-body">
-                            <form>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <label>Order ID :</label>
-                                            <input class="form-control" id="txtOrderID" type="text">
-                                            <span class="control-error"
-                                                  id="orderId-invalid-error"></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <label>Date :</label>
-                                            <input class="form-control" id="txtDate" type="date">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <label for="orderCustomerID">Customer ID</label>
-                                            <input class="form-control" id="orderCustomerID">
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <label>Customer :</label>
-                                            <select class="form-control" id="selectCusID">
+<div  id="placeOrder">
+    <section class="row m-2 rounded-3">
+        <div class="col bg-light m-1 card">
+            <h5 class="card-header bg-warning " style="color: whitesmoke">Customer</h5>
+            <div class="card-body">
+                <form class="row ">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold" for="orderFormCustomerTp">Order Id :</label>
+                            <input class="form-control" id="orderId" placeholder="0001" readonly="readonly" required
+                                   type="text">
+                        </div>
 
-                                            </select>
-                                            <span class="control-error"
-                                                  id="cus-empty-error"></span>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <label>Name :</label>
-                                            <input class="form-control" id="orderCustomerName" type="text">
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <label>Address :</label>
-                                            <input class="form-control" id="orderCustomerAddress" type="text">
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold" for="date">Date :</label>
+                            <input class="form-control" id="date" required type="date">
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-5 mt-lg-0 mt-3">
-                    <div class="card">
-                        <div class="card-header bg-warning  font-weight-bolder">Item Select</div>
-                        <div class="card-body">
-                            <form>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <label>Item :</label>
-                                            <select class="form-control" id="selectItemCode"></select>
-                                            <span class="control-error"
-                                                  id="item-empty-error"></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <label>Item Code :</label>
-                                            <input class="form-control" id="txtItemCode" type="text">
-                                        </div>
-                                    </div>
-                                    <div class="col-5">
-                                        <div class="form-group">
-                                            <label>Item Name :</label>
-                                            <input class="form-control" id="txtItemDescription" type="text">
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="form-group">
-                                            <label class="">Price :</label>
-                                            <input class="form-control" id="txtItemPrice" type="text">
-                                        </div>
-                                    </div>
-                                    <div class="col-3">
-                                        <div class="form-group">
-                                            <label class="">QtyOnH :</label>
-                                            <input class="form-control" id="txtQTYOnHand" type="text">
-                                        </div>
-                                    </div>
-                                    <hr class="mt-4">
-                                    <hr>
-                                    <div class="col-12 mt-4">
-                                        <div class="form-group">
-                                            <label>Order Quantity :</label>
-                                            <input class="form-control" id="txtQty" min="1" type="number">
-                                            <span class="control-error" id="order-qty-empty-error"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group text-right">
-                                    <button class="btn btn-outline-success col-12 col-sm-auto mt-1" id="btnAddToTable" type="button">
-                                        Add Item
-                                    </button>
-                                </div>
-                            </form>
+
+                    <div class="row">
+                        <div class="col-md-5">
+                            <label class="form-label fw-bold" for="orderFormCstId">Customer Id :</label>
+                            <select aria-label=".form-select-lg example" class="form-select form-select-sm mb-3"
+                                    id="orderFormCstId">
+
+                            </select>
+                        </div>
+                        <div class="col-md-7">
+                            <label class="form-label fw-bold" for="orderFormCustomerName">Customer Name :</label>
+                            <input class="form-control" id="orderFormCustomerName" readonly="readonly" required
+                                   type="text">
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3">
-                    <section class="content-box-2 p-4 ">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <span class="" id="total-text">Total : </span>
-                                    </div>
-                                    <div class="col-12">
-                                        <span id="total">00.0</span> Rs/=
-                                    </div>
-                                </div>
 
-                            </div>
-                            <div class="col-12">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <span id="total-text1">SubTotal : </span>
-                                    </div>
-                                    <div class="col-12">
-                                        <span id="subtotal">00.0</span> Rs/=
-                                    </div>
-                                </div>
+                    <div class="row">
 
-                            </div>
-                            <div class="col-6 mt-2">
-                                <div class="form-group">
-                                    <label>Cash</label>
-                                    <input class="form-control" id="txtCash" min="0" type="number">
-                                    <span class="control-error"
-                                          id="cash-empty-error"></span>
-                                </div>
-                            </div>
-                            <div class="col-6 mt-2">
-                                <div class="form-group">
-                                    <label>Discount</label>
-                                    <input class="form-control" id="txtDiscount" min="0" type="number">
-                                </div>
-                            </div>
-                            <div class="col-8">
-                                <div class="form-group">
-                                    <label>Balance</label>
-                                    <input class="form-control" id="txtBalance" type="text">
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <button class="btn btn-outline-primary mt-3" id="btnSubmitOrder" type="button">Purchase</button>
-                            </div>
+                        <div class="col-md-12">
+                            <label class="form-label fw-bold" for="orderFormCustomerAddress">Customer Address
+                                :</label>
+                            <input class="form-control" id="orderFormCustomerAddress" readonly="readonly" required
+                                   type="text">
                         </div>
-                    </section>
-                </div>
-            </div>
-            <!--order table-->
-            <div class="col-md-12 mt-4" style="height:180px; overflow-y: scroll">
-                <table class="table table-bordered text-white">
-                    <thead class="bg-dark">
-                    <tr>
-                        <th>Item Code</th>
-                        <th>Item Name</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Total</th>
-                    </tr>
-                    </thead>
-                    <tbody class="bg-light text-dark" id="orderTable">
 
-                    </tbody>
-                </table>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold" for="orderFormCustomerTp">Customer Tp :</label>
+                            <input class="form-control" id="orderFormCustomerTp" readonly="readonly" required
+                                   type="text">
+                        </div>
+
+                    </div>
+                </form>
             </div>
-            <!---------->
         </div>
-    </div>
-</section>
+
+        <div class="col bg-light m-1 card">
+            <h5 class="card-header bg-warning " style="color: whitesmoke">Item Select</h5>
+            <div class="card-body">
+                <form class="row">
+                    <div class="row mb-5">
+                        <div class="col-md-6 fw-bold">
+                            <label class="form-label" for="orderFormItemId">Item Id :</label>
+                            <select aria-label="Default select example" class="form-select form-select-sm mb-3"
+                                    id="orderFormItemId">
+                                <option selected></option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6 fw-bold">
+                            <label class="form-label" for="orderFormItemName">Item Name :</label>
+                            <input class="form-control" id="orderFormItemName" readonly="readonly" required
+                                   type="text">
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-md-4 fw-bold">
+                            <label class="form-label" for="orderFormQty">Item Qty :</label>
+                            <input class="form-control" id="orderFormQty" readonly="readonly" type="text">
+                        </div>
+
+                        <div class="col-md-4 fw-bold">
+                            <label class="form-label" for="orderFormPrice">Item Price :</label>
+                            <input class="form-control" id="orderFormPrice" readonly="readonly" required
+                                   type="text">
+                        </div>
+
+                        <div class="col-md-4 fw-bold">
+                            <label class="form-label" for="orderQty">Order Qty :</label>
+                            <input class="form-control" id="orderQty" required type="text">
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    <div>
+                        <button class="btn bg-warning p-2 text-dark bg-opacity-50 fw-bold" id="btnAddItem"
+                                type="button">Add Item
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="col bg-white bg-opacity-10 m-1 card" style="width: 18rem;">
+            <div class="row mb-5">
+                <div class="card-body">
+                    <div class="col-md-6 fw-bold ">
+                        <label class="form-label text-primary bg-opacity-10" for="total">Total </label>
+                        <h2 class="fw-lighter text-primary bg-opacity-10" id="total">00.00/=</h2>
+                    </div>
+
+                    <div class="col-md-6 fw-bold ">
+                        <label class="form-label text-danger bg-opacity-10" for="subTotal">SubTotal </label>
+                        <h2 class="fw-lighter text-danger bg-opacity-10" id="subTotal">00.00/=</h2>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 fw-bold">
+                            <label class="form-label" for="orderFormItemName">Cash :</label>
+                            <input class="form-control" id="txtCash" required type="text">
+                        </div>
+
+                        <div class="col-md-6 fw-bold">
+                            <label class="form-label" for="orderFormItemName">Discount :</label>
+                            <input class="form-control" id="txtDiscount" readonly="readonly" required type="text">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 fw-bold">
+                            <label class="form-label" for="orderFormItemName">Balance :</label>
+                            <input class="form-control" id="txtBalance" readonly="readonly" required type="text">
+                        </div>
+
+                        <div class="col-md-6 fw-bold mt-4">
+                            <button class="btn bg-success p-2 text-white bg-opacity-100 fw-bold" id="btnPurchase"
+                                    type="button">Purchase
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="row m-2">
+        <table class="table table-dark table-striped mt-5">
+            <thead>
+            <tr>
+                <th scope="col">Item Id</th>
+                <th scope="col">Item Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total</th>
+                <th scope="col">Function</th>
+            </tr>
+            </thead>
+            <tbody id="orderFormTableBody">
+
+            </tbody>
+        </table>
+    </section>
+</div>
+    </section>
 <!--Order Content End-->
 <script src="assets/boostrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
@@ -376,6 +353,8 @@
 <script src="db/DB.js"></script>
 <script src="model/ItemDTO.js"></script>
 <script src="controller/ItemController.js"></script>
+<script src="controller/OrderController.js"></script>
+<script src="model/OrdersDTO.js"></script>
 
 <script>
 //hide all content

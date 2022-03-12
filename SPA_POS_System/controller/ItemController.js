@@ -87,7 +87,24 @@ function clearAll() {
     $('#itemId,#ItemName,#itemQty,#unitPrice').val("");
     $('#itemId,#ItemName,#itemQty,#unitPrice').css('border', '2px solid #ced4da');
     $('#itemId').focus();
-    $("#addItem").attr('disabled', true);
+   // $("#addItem").attr('disabled', true);
+    loadAllItem();
+
+}
+$("#searchItem").click()(function (){
+    searchItem();
+});
+function searchItem() {
+    for (var i in itemArray ){
+        if ($("#searchItem").val() === itemArray[i].getItemCode()){
+            let a = itemArray[i];
+            $('#itemId').val(a.getItemCode());
+            $("#ItemName").val(a.getItemName());
+            $("#itemQty").val(a.getItemQTY());
+            $("#unitPrice").val(a.getPrice());
+
+        }
+    }
     loadAllItem();
 
 }
