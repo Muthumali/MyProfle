@@ -175,6 +175,9 @@
 </section>
 <!--Item Content End-->
 
+
+<!--Order Content Start-->
+
 <section class="container-fluid" id="orderForm">
     <div class="12 grid-margin">
         <div class="row">
@@ -215,8 +218,8 @@
                         <form class="forms-sample">
                             <div class="row form-group m-0">
                                 <div class="col-12">
-                                    <span class="h1" id="total-text">Total  :  Rs. </span>
-                                    <span class="h1" id="txtTotal"> 0.00</span>
+                                    <span class="h1  text-danger" id="total-text ">Total  :  Rs. </span>
+                                    <span class="h1  text-danger"  id="txtTotal"> 0.00</span>
                                 </div>
                             </div>
                         </form>
@@ -229,7 +232,7 @@
             <div class="col-md-4 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h2 class="card-title">Customer Details</h2>
+                        <h2 class="card-title text-warning">Customer Details</h2>
                         <form class="forms-sample">
                             <div class="row form-group mt-3">
                                 <label for="cmbOrderCustId" class="col-sm-3 col-form-label">ID</label>
@@ -264,7 +267,7 @@
             <div class="col-md-4 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h2 class="card-title">Item Details</h2>
+                        <h2 class="card-title text-warning">Item Details</h2>
                         <form class="forms-sample">
                             <div class="row form-group mt-3">
                                 <label for="cmbOrderItemCode" class="col-sm-3 col-form-label">Code</label>
@@ -314,10 +317,10 @@
                                     </div>
                                 </div>
                                 <div class="col-5">
-                                    <button class="btn btn-primary mt-3" id="btnAddToCart" type="button">Add Item</button>
+                                    <button class="btn btn-success mt-3" id="btnAddToCart" type="button">Add Item</button>
                                 </div>
                                 <div class="col-5">
-                                    <button class="btn btn-primary mt-3" id="btnPurchaseOrder" type="button">Purchase</button>
+                                    <button class="btn btn-success mt-3" id="btnPurchaseOrder" type="button">Purchase</button>
                                 </div>
                             </div>
                         </section>
@@ -333,7 +336,7 @@
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table table-hover">
-                                <thead class="bg-white text-black">
+                                <thead class="bg-dark text-white">
                                 <tr>
                                     <th>Item Code</th>
                                     <th>Item Name</th>
