@@ -26,7 +26,7 @@ function loadAllItem() {
 $("#addItem").click(function ( ){
     saveItem();
     loadAllItem();
-
+loadItemIds();
 });
 
 function saveItem(){
@@ -37,7 +37,7 @@ function saveItem(){
 
     var Item= new ItemDTO(itemID,itemName,itemQty,unitPrice);
     itemDB.push(Item);
-    clearAll();
+    clearAllItems();
 }
 
 
@@ -68,7 +68,8 @@ $("#updateItem").click(function () {
         }
     }
     loadAllItem();
-    clearAll();
+    clearAllItems();
+    loadItemIds();
 
 });
 /*Delete Item*/
@@ -80,10 +81,11 @@ $("#deleteItem").click( function () {
     }
     /*End of the Delete Button*/
     loadAllItem();
-    clearAll();
+    clearAllItems();
+    loadItemIds();
 });
 
-function clearAll() {
+function clearAllItems() {
     $('#itemId,#ItemName,#itemQty,#unitPrice').val("");
     $('#itemId,#ItemName,#itemQty,#unitPrice').css('border', '2px solid #ced4da');
     $('#itemId').focus();
@@ -91,20 +93,27 @@ function clearAll() {
     loadAllItem();
 
 }
-$("#searchItem").click()(function (){
+$("#searchItem").click(function (){
     searchItem();
 });
 function searchItem() {
-    for (var i in itemArray ){
-        if ($("#searchItem").val() === itemArray[i].getItemCode()){
-            let a = itemArray[i];
-            $('#itemId').val(a.getItemCode());
-            $("#ItemName").val(a.getItemName());
-            $("#itemQty").val(a.getItemQTY());
-            $("#unitPrice").val(a.getPrice());
-
+    let val = $("#srcItemID").val();
+    for (let i = 0; i < itemDB.length; i++) {
+        if (itemDB[i].getItemCode() == val){
+            $('#itemId').val(itemDB[i].getItemCode());
+            $("#ItemName").val(itemDB[i].getItemName());
+            $("#itemQty").val(itemDB[i].getItemQTY());
+            $("#unitPrice").val(itemDB[i].getPrice());
         }
     }
     loadAllItem();
 
+}
+function loadItemIds() {
+    $("#cmbOrderItemCode").empty();
+    $('#cmbOrderItemCode').append(new Option("Item Code", ""));
+    for (var i in itemDB){
+        let code=itemDB[i].getItemCode();
+        $('#cmbOrderItemCode').append(new Option(code, code));
+    }
 }

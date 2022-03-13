@@ -25,6 +25,7 @@ $("#addCustomer").click(function ( ){
     saveCustomer();
     loadAllCustomer();
     clearAll();
+    loadCustomerIds();
 
 });
 
@@ -66,6 +67,7 @@ $("#updateCustomer").click(function () {
     }
     loadAllCustomer();
     clearAll();
+    loadCustomerIds();
 
 });
 /*Delete Customer*/
@@ -78,6 +80,7 @@ $("#deleteCustomer").click( function () {
     /*End of the Delete Button*/
     loadAllCustomer();
     clearAll();
+    loadCustomerIds();
 });
 
 function clearAll() {
@@ -89,3 +92,28 @@ function clearAll() {
 
 }
 
+function loadCustomerIds() {
+    $("#cmbOrderCustId").empty();
+    $('#cmbOrderCustId').append(new Option("Customer ID", ""));
+    for (var i in customerDB){
+        let id=customerDB[i].getID();
+        $('#cmbOrderCustId').append(new Option(id, id));
+    }
+}
+
+$("#searchCustomer").click(function (){
+    searchCustomer();
+});
+function searchCustomer() {
+    let val = $("#srcCusID").val();
+    for (let i = 0; i < customerDB.length; i++) {
+        if (customerDB[i].getID() == val){
+            $('#cusID').val(customerDB[i].getID());
+            $("#cusName").val(customerDB[i].getName());
+            $("#cusAddress").val(customerDB[i].getAddress());
+            $("#contact").val(customerDB[i].getContact());
+        }
+    }
+    loadAllCustomer();
+
+}

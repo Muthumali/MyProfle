@@ -1,78 +1,55 @@
-function orderDTO(oId,date,cId,iId,iName,iPrice,oQty,total,subTotal){
-    var __oId=oId;
-    var __oDate=date;
-    var __cId=cId;
-    var __iId=iId;
-    var __iName=iName;
-    var __iPrice=iPrice;
-    var __oQty=oQty;
-    var __total=total;
+function OrderDTO(orderId,customerId,orderDate,orderTime,cost,detailList){
 
-    this.getOrderId=function (){
-        return __oId;
+    this.orderId=orderId;
+    this.orderDate=orderDate;
+    this.orderTime=orderTime;
+    this.orderCustomerId=customerId;
+    this.orderCost=cost;
+    this.detailList=detailList;
+
+    this.getId = function () {
+        return dis.orderId;
+    }
+    this.setId = function (id) {
+        this.orderId = id;
     }
 
-    this.setOrderId=function (value){
-        __oId=value;
+    this.getDate = function () {
+        return this.orderDate;
     }
 
-    this.getOrderDate=function (){
-        return __oDate;
+    this.setOrderTime=function(orderTime){
+        this.orderTime=orderTime;
+    }
+    this.getOrderTime=function(){
+        return this.orderTime;
     }
 
-    this.setOrderDate=function (value){
-        __oDate=value;
+    this.setName = function (date) {
+        this.orderDate = date;
+    }
+    this.getCustomerId = function () {
+        return this.orderCustomerId;
     }
 
-    this.getOrderCustomerId=function (){
-        return __cId;
+    this.setCustomerId = function (customerId) {
+        this.orderCustomerId = customerId;
+    }
+    this.getOrderItem = function () {
+        return dis.orderItem;
     }
 
-    this.setOrderCustomerId=function (value){
-        __cId=value;
+    this.setOrderCost= function (orderCost) {
+        this.orderCost = orderCost ;
+    }
+    this.getOrderCost = function () {
+        return dis.orderCost;
+    }
+    this.getDetailList = function () {
+        return this.detailList;
     }
 
-    this.getOrderItemId=function (){
-        return __iId;
+    this.setDetailList= function (detailList) {
+        this.detailList = detailList ;
     }
-
-    this.setOrderItemId=function (value){
-        __iId=value;
-    }
-
-    this.getOrderItemName=function (){
-        return __iName;
-    }
-
-    this.setOrderItemName=function (value){
-        __iName=value;
-    }
-
-    this.getOrderItemPrice=function (){
-        return __iPrice;
-    }
-
-    this.setOrderItemPrice=function (value){
-        __iPrice=value;
-    }
-
-    this.getOrderQty=function (){
-        return __oQty;
-    }
-
-    this.setOrderQty=function (value){
-        __oQty=value;
-    }
-
-    this.getTotal=function (){
-        return __total;
-    }
-
-    this.setTotal=function (value){
-        __total=value;
-    }
-
-
-
-
 }
