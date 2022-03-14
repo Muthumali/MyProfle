@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Case_01</title>
+  <link rel="stylesheet" href="assets/boostrap/css/bootstrap.min.css">
+  <style>
+
+    body{
+      background-color: black;
+    }
+    section {
+      height: 10vh;
+      width: 75vw;
+      display: flex;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border: 1px solid #d5c2c2;
+    }
+
+    section > div {
+      width: 15vw;
+      border: 1px solid #d5c2c2;
+    }
+
+
+    body > div {
+      width: 100vw;
+      height: 5vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 35vh;
+    }
+
+  </style>
+</head>
+<body>
+<section>
+  <div style="background-color: blue"></div>
+  <div style="background-color: yellow"></div>
+  <div style="background-color: red"></div>
+  <div style="background-color: white"></div>
+  <div style="background-color: orange"></div>
+</section>
+
+<div>
+  <button id="btnStart" class="btn btn-primary">Start</button>
+  <button id="btnStop" class="btn btn-danger">Stop</button>
+</div>
+
+<script src="assets/boostrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+<script>
+
+  function animateColors() {
+    let colour1 = $("section>div:nth-child(1)").css('background-color');
+    let colour2 = $("section>div:nth-child(2)").css('background-color');
+    let colour3 = $("section>div:nth-child(3)").css('background-color');
+    let colour4 = $("section>div:nth-child(4)").css('background-color');
+    let colour5 = $("section>div:nth-child(5)").css('background-color');
+
+    $("section>div:nth-child(1)").css('background-color',colour2);
+    $("section>div:nth-child(2)").css('background-color',colour3);
+    $("section>div:nth-child(3)").css('background-color',colour4);
+    $("section>div:nth-child(4)").css('background-color',colour5);
+    $("section>div:nth-child(5)").css('background-color',colour1);
+
+  }
+
+  let timerId
+  $("#btnStart").click(function () {
+    clearInterval(timerId);
+    timerId =   setInterval(animateColors,100);
+  });
+
+
+  $("#btnStop").click(function () {
+    clearInterval(timerId);
+  });
+</script>
+</body>
+</html>
+© 2022 GitHub, Inc.
+Terms
+Priva

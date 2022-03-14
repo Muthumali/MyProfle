@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment_09</title>
+    <style>
+        body{
+            background-color: #030310;
+            overflow: hidden;
+        }
+        body>main{
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border: 5px solid #e8dd05;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            overflow: hidden;
+        }
+        body>main>section{
+            width: 400%;
+            height: 100%;
+            display: flex;
+            animation-name: case_09;
+            animation-duration: 10s;
+            animation-iteration-count:infinite ;
+            animation-direction: alternate;
+        }
+        body>main>section>div{
+            width: 100%;
+        }
+        body>main>section>div:nth-child(1){
+            background-image: url("assets/image/1.jpg");
+            background-size: cover;
+            background-position:center;
+        }
+        body>main>section>div:nth-child(2){
+            background-image: url("assets/image/2.jpeg");
+            background-size: cover;
+            background-position:center;
+        }
+        body>main>section>div:nth-child(3){
+            background-image: url("assets/image/3.jpg");
+            background-size: cover;
+            background-position:center;
+        }
+        body>main>section>div:nth-child(4){
+            background-image: url("assets/image/4.png");
+            background-size: cover;
+            background-position:center;
+        }
+        @keyframes case_09 {
+            0%,15%{
+                transform: translateX(0);
+            }
+            25%,40%{
+                transform: translateX(-25%);
+            }
+            50%,70%{
+                transform: translateX(-50%);
+            }
+            80%,100%{
+                transform: translateX(-75%);
+            }
+        }
+    </style>
+</head>
+<body>
+<main>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</main>
+</body>
+</html>
